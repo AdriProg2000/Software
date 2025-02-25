@@ -1,127 +1,54 @@
-/* Efectos generales */
+/* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-image: url('background.webp');
     background-size: cover;
     margin: 0;
     padding: 0;
     color: #fff;
-    overflow-x: hidden;
-    animation: backgroundAnimation 10s infinite alternate;
 }
 
-/* Animación de fondo */
-@keyframes backgroundAnimation {
-    0% { background-position: center top; }
-    100% { background-position: center bottom; }
+/* Estilo del header con animación de entrada */
+header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el header */
+    padding: 20px;
+    opacity: 0; /* Inicia con opacidad 0 */
+    animation: fadeInHeader 2s forwards; /* Animación de desvanecimiento */
 }
 
-/* Animación de entrada de los textos */
-h1, h2, p {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+/* Animación de desvanecimiento para el header */
+@keyframes fadeInHeader {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Estilo para los títulos en el header */
 h1 {
-    animation-delay: 0.5s;
-}
-
-h2 {
-    animation-delay: 1s;
-}
-
-p {
-    animation-delay: 1.5s;
-}
-
-/* Animación Fade In */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Efecto de "desplazamiento" para la introducción */
-.intro {
-    opacity: 0;
-    animation: slideIn 1.5s ease-out forwards;
-    margin-top: 20px;
-}
-
-@keyframes slideIn {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
-}
-
-/* Efecto para los enlaces */
-a {
+    font-size: 2rem;
     color: #ff3366;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: transform 0.3s, color 0.3s;
-}
-
-a:hover {
-    color: #f56b00;
-    transform: scale(1.1);
-}
-
-/* Animación de entrada para las listas de descarga */
-.download li {
-    opacity: 0;
-    animation: fadeInList 1.5s ease-out forwards;
-    animation-delay: 2s;
-}
-
-@keyframes fadeInList {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Animación de "barrido" para los encabezados */
-header h1 {
     text-shadow: 0 0 10px rgba(255, 105, 180, 0.8), 0 0 20px rgba(255, 105, 180, 0.6);
-    animation: textSweep 3s infinite alternate;
 }
 
-@keyframes textSweep {
-    0% { color: #ff3366; }
-    50% { color: #ff6600; }
-    100% { color: #f56b00; }
+/* Estilos para las secciones */
+section {
+    margin-top: 20px;
+    text-align: center;
 }
 
-/* Animación del footer */
+.intro h2 {
+    color: #ff6600;
+    font-size: 1.5rem;
+}
+
+.download ul {
+    list-style-type: none;
+}
+
 footer {
     text-align: center;
-    opacity: 0;
-    animation: fadeInFooter 2s ease-in forwards;
-    animation-delay: 3s;
-}
-
-@keyframes fadeInFooter {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Estilo de hover para los botones de descarga */
-.download li a {
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: rgba(255, 105, 180, 0.3);
-    transition: background-color 0.3s;
-}
-
-.download li a:hover {
-    background-color: rgba(255, 105, 180, 0.6);
-}
-
-/* Efecto "escala" para las secciones de contenido */
-section {
-    opacity: 0;
-    transform: scale(0.8);
-    animation: scaleUp 2s forwards;
-}
-
-@keyframes scaleUp {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    margin-top: 20px;
 }
