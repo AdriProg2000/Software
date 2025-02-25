@@ -13,8 +13,8 @@ header {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el header */
     padding: 20px;
-    opacity: 0; /* Inicia con opacidad 0 */
-    animation: fadeInHeader 2s forwards; /* Animación de desvanecimiento */
+    opacity: 0; /* Empieza invisible */
+    animation: fadeInHeader 2s forwards; /* Animación para que se muestre */
 }
 
 /* Animación de desvanecimiento para el header */
