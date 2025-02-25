@@ -1,56 +1,14 @@
-/* ========== ANIMACIONES AL CARGAR ========== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* ========== APLICAR LAS ANIMACIONES ========== */
+/* ANIMACIÓN SIMPLE PARA QUE NO ROMPA LA WEB */
 body {
     opacity: 0;
-    animation: fadeInUp 1.5s ease-out forwards;
+    animation: fadeIn 1.5s ease-out forwards;
 }
 
-/* Animación escalonada en cada sección */
-header {
-    animation: fadeInUp 1s ease-out;
-}
-
-.intro {
-    animation: fadeInLeft 1.5s ease-out;
-}
-
-.download {
-    animation: fadeInRight 2s ease-out;
-}
-
-footer {
-    animation: fadeInUp 2.5s ease-out;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
