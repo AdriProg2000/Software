@@ -1,46 +1,105 @@
-/* Fondo optimizado */
-body {
-    background: url('background.webp') fixed center/cover;
+/* ======= ESTILO GENERAL ======= */
+* {
     margin: 0;
     padding: 0;
-    color: white;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('background.webp') fixed center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     text-align: center;
-    font-family: Arial, sans-serif;
+    color: white;
+    backdrop-filter: blur(5px);
 }
 
-/* Estilos generales */
-h1, h2, p {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-/* Animaciones con Animate.css */
+/* ======= HEADER ======= */
 header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     animation: fadeInDown 1s;
 }
 
-.intro h2, .intro p {
+/* ======= INTRO ======= */
+.intro {
+    margin: 20px 0;
+}
+
+.intro h2 {
+    font-size: 2rem;
     animation: fadeInLeft 1.5s;
 }
 
+.intro p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: fadeInRight 1.5s;
+}
+
+/* ======= DESCARGA ======= */
 .download {
+    margin-top: 30px;
     animation: fadeInUp 2s;
 }
 
-/* Enlace de descarga */
+.download h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
 .download a {
-    color: #00ffcc;
+    display: inline-block;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 5px;
-    transition: 0.3s;
+    padding: 12px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 114, 255, 0.3);
+    transition: all 0.3s ease-in-out;
 }
 
 .download a:hover {
-    text-decoration: underline;
-    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+}
+
+/* ======= FOOTER ======= */
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .intro h2 {
+        font-size: 1.8rem;
+    }
+    .intro p {
+        font-size: 1rem;
+    }
+    .download a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }
