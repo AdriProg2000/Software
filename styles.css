@@ -62,22 +62,22 @@ header h1 {
 
 .download a {
     display: inline-block;
-    background: linear-gradient(135deg, #007bff, #0056b3); /* Azul oscuro a azul intermedio */
-    color: white;
+    background: #333; /* Fondo oscuro para buen contraste */
+    color: #f1f1f1; /* Texto claro */
     font-weight: bold;
     text-decoration: none;
     padding: 12px 25px;
     border-radius: 8px;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Borde blanco translúcido */
-    box-shadow: 0 4px 15px rgba(0, 91, 153, 0.5); /* Sombra suave azul */
+    border: 2px solid #fff; /* Borde blanco fuerte */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más destacada */
     transition: all 0.3s ease-in-out;
 }
 
 .download a:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, #0066cc, #004d99); /* Azul más oscuro al hacer hover */
-    box-shadow: 0 6px 20px rgba(0, 91, 153, 0.7); /* Sombra más fuerte */
-    border-color: white; /* Hace el borde más visible al pasar el mouse */
+    background: #555; /* Fondo un poco más claro al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7); /* Sombra más fuerte */
+    border-color: #f1f1f1; /* Borde blanco cuando se pasa el mouse */
 }
 
 /* ======= FOOTER ======= */
